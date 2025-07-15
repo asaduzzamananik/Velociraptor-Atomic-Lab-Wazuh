@@ -50,11 +50,11 @@ Repeat the same for Kali Linux And Ubuntu
 ## Tool Overview: Why Each Tool Was Used
 
 | **Tool**  | **What It Is** | **Why It Was Used** | 
-|---------------|-------------|---------------|---------------|
-| **Wazuh**    | Open-source XDR/SIEM platform  | To detect attacker behavior via log analysis and provide alerting/visuals |
-| **Velociraptor**    | DFIR (Digital Forensics and Incident Response) Framework | To collect and query forensic data on endpoints|
-| **Atomic Red Team**   | Library of scripted adversary techniques from MITRE ATT&CK  | To simulate real-world attack behaviors in a controlled lab environment |
-| **PowerShell**    | Cross-platform version of Windows PowerShell | Required to execute Atomic Red Team techniques written in PowerShell |
+|---------------|-------------|---------------|
+| **Wazuh** | Open-source XDR/SIEM platform  | To detect attacker behavior via log analysis and provide alerting/visuals |
+| **Velociraptor** | DFIR (Digital Forensics and Incident Response) Framework | To collect and query forensic data on endpoints |
+| **Atomic Red Team** | Library of scripted adversary techniques from MITRE ATT&CK | To simulate real-world attack behaviors in a controlled lab environment |
+| **PowerShell** | Cross-platform version of Windows PowerShell | Required to execute Atomic Red Team techniques written in PowerShell |
 
 ## Lab Setup 
 
