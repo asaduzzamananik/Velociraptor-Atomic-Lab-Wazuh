@@ -2112,6 +2112,7 @@ https://<your-wazuh-manager-ip>:5601
 This lab provides for you a complete hands-on simulation environment which emulates the Linux-based adversarial techniques as well as tests real-world detection capabilities by way of open-source tools. By leveraging Wazuh, Velociraptor, and Atomic Red Team, defenders gain a practical comprehension of how various attack vectors operate. Effective monitoring and investigation are enabled by these tools providing SIEM/XDR, forensics and endpoint visibility, and technique simulation.
 
 This setup lets users do these things:
+
 	- For framework context, mimic precise methods such as T1059.004 to comprehend MITRE ATT&CK.
 	- To enable precise detection, visualize how endpoint actions generate security events plus how Wazuh rules can be customized.
 	- Suspicious behaviors can be identified through Velociraptor’s artifact collection as well as its live response.
