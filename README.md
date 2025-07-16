@@ -2113,11 +2113,12 @@ This lab provides for you a complete hands-on simulation environment which emula
 
 
 This setup lets users do these things:
-	- For framework context, mimic precise methods such as T1059.004 to comprehend MITRE ATT&CK.
-	- To enable precise detection, visualize how endpoint actions generate security events plus how Wazuh rules can be customized.
-	- Suspicious behaviors can be identified through Velociraptor’s artifact collection as well as its live response.
-	- PowerShell simulates attacks on Linux a nontraditional yet increasingly critical target.
-	- Detection engineering principles as well as incident response workflows must be learned.
+
+- For framework context, mimic precise methods such as T1059.004 to comprehend MITRE ATT&CK.
+- To enable precise detection, visualize how endpoint actions generate security events plus how Wazuh rules can be customized.
+- Suspicious behaviors can be identified through Velociraptor’s artifact collection as well as its live response.
+- PowerShell simulates attacks on Linux a nontraditional yet increasingly critical target.
+- Detection engineering principles as well as incident response workflows must be learned.
 
 
 For cybersecurity students and also for researchers along with blue teamers, this structured educational lab is empowering. It gives to them a repeatable framework for safely improving detection and investigation skills in a controlled setting.
