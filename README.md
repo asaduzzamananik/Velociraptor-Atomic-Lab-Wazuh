@@ -35,11 +35,11 @@ This project helps bridge the gap between offensive simulation and defensive mon
  ## Network Architecture
  
  ```text
-[ Ubuntu Server (10.0.2.15) ]
+[ Ubuntu Server ]
   ├─ Wazuh Manager (SIEM/EDR)
   └─ Velociraptor Server (Forensics)
 
-[ Kali Linux (10.0.2.17) ]
+[ Kali Linux ]
   ├─ Wazuh Agent
   ├─ Velociraptor Client
   └─ Atomic Red Team Testbed
@@ -242,7 +242,7 @@ velociraptor --config velociraptor.config.yaml config client > client.config.yam
 ```
 Move **client config file** to Kali Linux via **SCP**
 ```bash
-scp client.config.yaml root@10.0.2.17:/root/
+scp client.config.yaml root@<your ip>:/root/
 ```
 
 Go to kali linux and paste : 
