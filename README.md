@@ -1,4 +1,5 @@
-# Linux-Atomic-Wazuh-Simulation-Lab
+# Velociraptor-Atomic-Lab-Wazuh
+
 Complete End-to-End Lab: Simulating Linux MITRE ATT&amp;CK with Atomic Red Team, Velociraptor &amp; Wazuh
 
 ---
@@ -16,6 +17,7 @@ Referenced Tools:
 	- Wazuh Security Platform
 	- PowerShell Core for Linux
 
+---
 
 ## Project Objective
 This open-source security lab demonstrates how to simulate MITRE ATT&CK techniques on Linux and detect them using real-world blue team tooling. The goal is to help learners understand attacker behavior and validate detection using modern EDR and DFIR frameworks.
@@ -153,7 +155,6 @@ Log in with:
   - Password: the one you just created
 
 <img width="1850" height="890" alt="image" src="https://github.com/user-attachments/assets/c00ce3bf-00d9-4842-89d4-1967645a5f5c" />
-
 
 ---
 
@@ -2120,7 +2121,7 @@ Through this setup, users can:
 
 This structured, educational lab empowers cybersecurity students, researchers, and blue teamers with a repeatable framework for improving their detection and investigation skills in a safe and controlled setting.
 
-
+---
 
 
 
