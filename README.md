@@ -8,7 +8,14 @@ Complete End-to-End Lab: Simulating Linux MITRE ATT&amp;CK with Atomic Red Team,
 This project was inspired by a proof-of-concept video by **Taylor Walton** :
 
 🎥 **Video Title:**  
-[![Watch the demo](https://img.youtube.com/vi/tL3oNEx_3M8/0.jpg)](https://youtu.be/tL3oNEx_3M8?si=-4p5x2RnG3WMx___)
+[Simulate Linux Attacks and Tune Detection Rules with Atomic Red Team](https://www.youtube.com/watch?v=yll8-yqVv0w)
+
+Referenced Tools:
+	- Atomic Red Team
+	- Velociraptor DFIR
+	- Wazuh Security Platform
+	- PowerShell Core for Linux
+
 
 ## Project Objective
 This open-source security lab demonstrates how to simulate MITRE ATT&CK techniques on Linux and detect them using real-world blue team tooling. The goal is to help learners understand attacker behavior and validate detection using modern EDR and DFIR frameworks.
@@ -25,15 +32,16 @@ This project helps bridge the gap between offensive simulation and defensive mon
 
  ## Network Architecture
  
-   [ Ubuntu Server (10.0.2.15) ]
-    ├─ Wazuh Manager (SIEM/EDR)
-      └─ Velociraptor Server (Forensics)
+ ```text
+[ Ubuntu Server (10.0.2.15) ]
+  ├─ Wazuh Manager (SIEM/EDR)
+  └─ Velociraptor Server (Forensics)
 
-  [ Kali Linux (10.0.2.17) ]
-    ├─ Wazuh Agent
-      ├─ Velociraptor Client
-        └─ Atomic Red Team Testbed
-
+[ Kali Linux (10.0.2.17) ]
+  ├─ Wazuh Agent
+  ├─ Velociraptor Client
+  └─ Atomic Red Team Testbed
+```
 ---
   
 
