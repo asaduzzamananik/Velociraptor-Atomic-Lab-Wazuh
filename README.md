@@ -102,7 +102,7 @@ sudo bash ./wazuh-install.sh -a
 
 **⚠️ Note: In this lab, Wazuh was installed using this community repo for ease: https://github.com/samiul008ghub/soc_setup**
 
-Dashboard: https://10.0.2.15:5601
+Dashboard: https://<IP>:5601
 
 <img width="1809" height="884" alt="image" src="https://github.com/user-attachments/assets/28c80240-f939-4088-9ab6-eaf4f6c353b3" />
 
@@ -123,7 +123,7 @@ velociraptor config generate > velociraptor.config.yaml
 velociraptor --config velociraptor.config.yaml frontend
 ```
 
-Dashboard: https://10.0.2.15:8000
+Dashboard: https://<IP>:8000
 
 <img width="808" height="69" alt="image" src="https://github.com/user-attachments/assets/aaa297bd-79f8-4d75-af91-64043e35240b" />
 
