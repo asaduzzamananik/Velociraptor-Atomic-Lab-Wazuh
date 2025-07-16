@@ -3,6 +3,13 @@ Complete End-to-End Lab: Simulating Linux MITRE ATT&amp;CK with Atomic Red Team,
 
 ---
 
+## Credits & Original POC Reference
+
+This project was inspired by a proof-of-concept video by **Taylor Walton** :
+
+🎥 **Video Title:**  
+[![Watch the demo](https://img.youtube.com/vi/tL3oNEx_3M8/0.jpg)](https://youtu.be/tL3oNEx_3M8?si=-4p5x2RnG3WMx___)
+
 ## Project Objective
 This open-source security lab demonstrates how to simulate MITRE ATT&CK techniques on Linux and detect them using real-world blue team tooling. The goal is to help learners understand attacker behavior and validate detection using modern EDR and DFIR frameworks.
 
@@ -17,14 +24,15 @@ This project helps bridge the gap between offensive simulation and defensive mon
 ---
 
  ## Network Architecture
- [ Ubuntu Server (10.0.2.15) ]
-  ├─ Wazuh Manager (SIEM/EDR)
-  └─ Velociraptor Server (Forensics)
+ 
+   [ Ubuntu Server (10.0.2.15) ]
+    ├─ Wazuh Manager (SIEM/EDR)
+      └─ Velociraptor Server (Forensics)
 
-[ Kali Linux (10.0.2.17) ]
-  ├─ Wazuh Agent
-  ├─ Velociraptor Client
-  └─ Atomic Red Team Testbed
+  [ Kali Linux (10.0.2.17) ]
+    ├─ Wazuh Agent
+      ├─ Velociraptor Client
+        └─ Atomic Red Team Testbed
 
 ---
   
@@ -46,7 +54,7 @@ Check Enable Network Adapter
 Attached to: NAT Network
 Adapter Type: Intel PRO/1000 MT Desktop (default is fine)
 Cable Connected: Checked
-Select Adapter 2:
+
 
 Repeat the same for Kali Linux And Ubuntu
 
@@ -83,6 +91,7 @@ sudo bash ./wazuh-install.sh -a
 ```
 
 **⚠️ Note: In this lab, Wazuh was installed using this community repo for ease: https://github.com/samiul008ghub/soc_setup**
+
 Dashboard: https://10.0.2.15:5601
 
 <img width="1809" height="884" alt="image" src="https://github.com/user-attachments/assets/28c80240-f939-4088-9ab6-eaf4f6c353b3" />
@@ -2014,7 +2023,94 @@ How to Run Artifacts:
 
 <img width="1618" height="804" alt="image" src="https://github.com/user-attachments/assets/adf158d7-4eb4-46fc-aa76-ca27c53e7322" />
 
+<img width="1796" height="818" alt="image" src="https://github.com/user-attachments/assets/2ad3db16-0d01-47f2-90a4-68d4dc2c7825" />
 
+<img width="1744" height="230" alt="image" src="https://github.com/user-attachments/assets/a5eb4be5-2cdb-4342-a772-cd38a44b7c9b" />
+
+<img width="1797" height="837" alt="image" src="https://github.com/user-attachments/assets/893f11f9-0358-45ae-9590-67fc16d71245" />
+
+---
+
+## Phase 5:Wazuh Host Monitoring
+
+ **Goal: Detect suspicious host behavior from the victim's machine.**
+Steps:
+- Install Wazuh Agent on Kali Linux.
+- Set the manager IP to Ubuntu host.
+- Start Wazuh agent service.
+- View alerts in Wazuh dashboard or log files.
+
+## 📸Wazuh Agent
+
+![wazuh_agent](https://github.com/user-attachments/assets/df124747-423a-4902-aff7-e3fa9e5cb803)
+
+---
+
+
+## Phase 6: MITRE ATT&CK Events in Wazuh (via Kibana/Elastic)
+
+1.**Open Kibana Web Interface**
+
+  - Go to your browser and visit:
+```bash
+https://<your-wazuh-manager-ip>:5601
+```
+  - Log in with your Kibana/Wazuh dashboard credentials.
+
+2. **Navigate to the Wazuh App**
+
+  - In the left-hand menu, click on Wazuh .
+  - It's redirected to the Wazuh Security Module dashboard.
+
+3. **Select Your Agent**
+
+  - Click on the tab or dropdown showing your agent's name, e.g.,
+     **anik_kali (004)**
+  - This filters events related to that specific agent.
+
+4. **Click on the MITRE ATT&CK Tab**
+  - At the top of the Wazuh module, click on MITRE ATT&CK.
+
+5.**Switch to the Events Tab**
+
+  - Within the MITRE ATT&CK section,see sub-tabs like:
+
+     - Intelligence
+     - Framework
+     - Dashboard
+     - Events ← Clicked this
+
+6. **Analyze Events**
+  - Now see all the events with:
+
+      - MITRE IDs (e.g., T1078)
+      - Tactics (e.g., Defense Evasion, Privilege Escalation)
+      - Rule description
+      - Rule ID and severity level
+
+![wazuhdetected](https://github.com/user-attachments/assets/90c31c63-b3ed-4f4a-94d4-1f41e7dae36e)
+
+![detection](https://github.com/user-attachments/assets/7e8f46e4-9c4c-4c0d-9dd4-56c196c7db6b)
+
+![root](https://github.com/user-attachments/assets/3e6fc6bb-11dd-4a32-acab-8fc7cb4c5222)
+
+![Root Detected](https://github.com/user-attachments/assets/53f05378-2c18-4d14-9027-07b014a61e88)
+
+---
+
+## Conclusion
+
+This lab provides a complete, hands-on simulation environment to emulate Linux-based adversarial techniques and test real-world detection capabilities using open-source tools. By leveraging Wazuh for SIEM/XDR, Velociraptor for forensics and endpoint visibility, and Atomic Red Team for technique simulation, defenders gain a practical understanding of how various attack vectors operate and how they can be effectively monitored and investigated.
+
+Through this setup, users can:
+
+  - Understand the MITRE ATT&CK framework in context by simulating specific techniques (like T1059.004).
+	- Visualize how endpoint actions generate security events and how Wazuh rules can be customized for precise detection.
+	- Utilize Velociraptor’s artifact collection and live response to identify suspicious behaviors.
+	- Experiment with PowerShell-based attack simulations on Linux, a nontraditional but increasingly important target environment.
+	- Learn incident response workflows and detection engineering principles.
+
+This structured, educational lab empowers cybersecurity students, researchers, and blue teamers with a repeatable framework for improving their detection and investigation skills in a safe and controlled setting.
 
 
 
