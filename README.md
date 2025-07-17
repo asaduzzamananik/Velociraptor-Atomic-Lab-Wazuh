@@ -12,10 +12,10 @@ This project was inspired by a proof-of-concept video by **Taylor Walton** :
 [Simulate Linux Attacks and Tune Detection Rules with Atomic Red Team](https://www.youtube.com/watch?v=yll8-yqVv0w)
 
 Referenced Tools:
-	- Atomic Red Team
-	- Velociraptor DFIR
-	- Wazuh Security Platform
-	- PowerShell Core for Linux
+- Atomic Red Team
+- Velociraptor DFIR
+- Wazuh Security Platform
+- PowerShell Core for Linux
 
 ---
 
@@ -102,7 +102,7 @@ sudo bash ./wazuh-install.sh -a
 
 **⚠️ Note: In this lab, Wazuh was installed using this community repo for ease: https://github.com/samiul008ghub/soc_setup**
 
-Dashboard: https://<IP>:5601
+Dashboard: https://<your_server_ip>:5601
 
 <img width="1809" height="884" alt="image" src="https://github.com/user-attachments/assets/28c80240-f939-4088-9ab6-eaf4f6c353b3" />
 
